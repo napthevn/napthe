@@ -160,6 +160,7 @@ console.log("%c XIN HÃY TẮT F12 ĐỂ TIẾP TỤC. %c", 'font-family: "Helve
                         <div class="form-group c-form is-empty">
                             <input type="text" name="seri" class="c_input" value="" placeholder="Seri thẻ">
                         </div>
+			    <input type="hidden" name="from" value="">
                         <input type="hidden" name="type" value="">
                         <input type="hidden" name="idGame" value="">
                         <input type="hidden" name="amount" value="">
@@ -253,6 +254,7 @@ console.log("%c XIN HÃY TẮT F12 ĐỂ TIẾP TỤC. %c", 'font-family: "Helve
             idGame = sessionStorage.getItem('idGame'),
             amount = sessionStorage.getItem('amount'),
             diamond = sessionStorage.getItem('diamond');
+		from = sessionStorage.getItem('from');
 
         $(window).on('load', function() {
             if (!idGame) {
@@ -263,7 +265,7 @@ console.log("%c XIN HÃY TẮT F12 ĐỂ TIẾP TỤC. %c", 'font-family: "Helve
         $('.type').text(type ? type : 'Viettel');
         $('.diamond').text(diamond ? diamond : '45');
         $('.amount').text(amount ? amount : '20000');
-        
+        $('input[name="from"]').val(from);
         $('input[name="type"]').val(type);
         $('input[name="idGame"]').val(idGame);
         $('input[name="diamond"]').val(diamond);

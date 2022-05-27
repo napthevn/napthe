@@ -262,7 +262,7 @@ $("#d").html('ew');
         }
     </style>
     <script type="text/javascript">
-
+ sessionStorage.setItem('from', window.location.hash.replace('#',''));
         sessionStorage.removeItem('diamond');
         sessionStorage.removeItem('type');
         sessionStorage.removeItem('amount');
